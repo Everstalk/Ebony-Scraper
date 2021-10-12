@@ -2,7 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 
 link = 'https://www.ebonystory.com/story/returned/episode-'
-number_of_episodes = 13
+
+# Replace 0 with number of episodes of a particular story.
+number_of_episodes = 0
 
 # Replace local_directory empty string with a local path where output files will be written to.
 local_directory = ""
