@@ -3,7 +3,10 @@ from bs4 import BeautifulSoup
 
 link = 'https://www.ebonystory.com/story/returned/episode-'
 number_of_episodes = 13
-directory = "/Users/michaelsaneke/Desktop/Scraper/output/episode-"
+
+# Replace local_directory empty string with a local path where output files will be written to.
+local_directory = ""
+
 
 # Functionality for scraping the story from the page
 def story_scraper(link, c):
@@ -26,7 +29,7 @@ def story_scraper(link, c):
         for p in story_element :
             paragraphs += '\n' + p.text
 
-        f = open(directory + str(c)+".txt", "w")
+        f = open(local_directory + str(c)+".txt", "w")
         f.write(title_element.text)
         f.write(str(paragraphs))
     
